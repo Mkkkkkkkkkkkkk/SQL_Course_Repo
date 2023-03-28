@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" modified="2023-03-28T14:03:34.451Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="kRKpUDcDKxSQCpEzfiKo" version="21.1.1" type="device">
+  <diagram name="Strona-1" id="9JK5gn5oEHFoCkCM9d3b">
+    <mxGraphModel dx="600" dy="332" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="I2BaAy30rMY0CPUC3k0a-1" value="User" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="100" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="I2BaAy30rMY0CPUC3k0a-2" value="+ userId &lt;b&gt;PK&lt;/b&gt;&lt;br&gt;+ login&lt;br&gt;+ email&lt;br&gt;+ password&lt;br&gt;+ userType" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="I2BaAy30rMY0CPUC3k0a-1">
+          <mxGeometry y="50" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="I2BaAy30rMY0CPUC3k0a-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.008;entryY=0.148;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=ERoneToMany;endFill=0;startArrow=ERmandOne;startFill=0;" edge="1" parent="1" source="I2BaAy30rMY0CPUC3k0a-3" target="I2BaAy30rMY0CPUC3k0a-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I2BaAy30rMY0CPUC3k0a-3" value="Course" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="100" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="I2BaAy30rMY0CPUC3k0a-4" value="+ courseId &lt;b&gt;PK&lt;/b&gt;&lt;br&gt;+ name&lt;br&gt;+ courseType" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="I2BaAy30rMY0CPUC3k0a-3">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="I2BaAy30rMY0CPUC3k0a-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=ERzeroToMany;endFill=0;startArrow=ERmandOne;startFill=0;" edge="1" parent="1" source="I2BaAy30rMY0CPUC3k0a-5" target="I2BaAy30rMY0CPUC3k0a-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I2BaAy30rMY0CPUC3k0a-5" value="CourseContent" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="100" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="I2BaAy30rMY0CPUC3k0a-6" value="+ courseContentId &lt;b&gt;PK&lt;/b&gt;&lt;br&gt;+ courseId &lt;b&gt;FK&lt;/b&gt;&lt;br&gt;+ content" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="I2BaAy30rMY0CPUC3k0a-5">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="I2BaAy30rMY0CPUC3k0a-7" value="Quiz" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="280" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="I2BaAy30rMY0CPUC3k0a-8" value="+ quizId &lt;b&gt;PK&lt;/b&gt;&lt;br&gt;+ courseContentId &lt;b&gt;FK&lt;/b&gt;&lt;br&gt;+ maxPoints" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="I2BaAy30rMY0CPUC3k0a-7">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="I2BaAy30rMY0CPUC3k0a-9" value="QuizQuestion" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="465" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="I2BaAy30rMY0CPUC3k0a-10" value="+ questionId &lt;b&gt;PK&lt;/b&gt;&lt;br&gt;+ quizId &lt;b&gt;FK&lt;/b&gt;&lt;br&gt;+ content" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="I2BaAy30rMY0CPUC3k0a-9">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="I2BaAy30rMY0CPUC3k0a-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=ERmandOne;endFill=0;startArrow=ERzeroToMany;startFill=0;" edge="1" parent="1" source="I2BaAy30rMY0CPUC3k0a-11" target="I2BaAy30rMY0CPUC3k0a-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I2BaAy30rMY0CPUC3k0a-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.355;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=ERmandOne;endFill=0;startArrow=ERzeroToMany;startFill=0;" edge="1" parent="1" source="I2BaAy30rMY0CPUC3k0a-11" target="I2BaAy30rMY0CPUC3k0a-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I2BaAy30rMY0CPUC3k0a-11" value="Statistics" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="290" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="I2BaAy30rMY0CPUC3k0a-12" value="+ statId &lt;b&gt;PK&lt;/b&gt;&lt;br&gt;+ quizId &lt;b&gt;FK&lt;/b&gt;&lt;br&gt;+userId &lt;b&gt;FK&lt;/b&gt;&lt;br&gt;+ earnedPoints" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="I2BaAy30rMY0CPUC3k0a-11">
+          <mxGeometry y="50" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="I2BaAy30rMY0CPUC3k0a-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=ERoneToMany;endFill=0;startArrow=ERmandOne;startFill=0;" edge="1" parent="1" source="I2BaAy30rMY0CPUC3k0a-8" target="I2BaAy30rMY0CPUC3k0a-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
